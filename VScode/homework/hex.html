@@ -135,22 +135,22 @@
         </div>
     </main>
     <script>
-        const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
+        const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
         const buttonPlace = document.getElementById("btn");
         const text = document.querySelector(".color");
-        
-        buttonPlace.addEventListener("click" , function() {
-            const random = tryit();
-            document.body.style.backgroundColor = colors[random];
-            text.textContent = colors[random];
-        });
-                 
         function tryit(){
-            return Math.floor(Math.random() * colors.length);
+            return Math.floor(Math.random() * hex.length);
         }
-        
 
-
+       
+        buttonPlace.addEventListener("click" , function() {            
+            let room="#";
+            for(let i = 1; i < 7; i++){
+                room = room + hex[tryit()];
+            }
+            document.body.style.backgroundColor = room;
+            text.textContent = room;
+        });
 
         
     </script>
