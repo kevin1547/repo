@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <style>
-    
+    *,
+    ::after,
+    ::before{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
     :root{
         --black: black;
+        --white: white;
         --ff-blue: rgb(0, 77, 177);
+        --ff-light-blue:rgba(0, 106, 192, 0.842);
     }
     body{
-        background-image: url("mo.jpg");
+        background-image: url("mo2.jpg");
         display: flex;
         flex-direction:column;
     }
     .Title{
         text-transform: capitalize;
         align-items: center;
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight: 800;
+        font-family:"Poppins",sans-serif;
+        margin-top: 100px;
+        margin-right: 80px;
+        display: flex;
+        justify-content: center;
     }
     .links{
         display: flex;
@@ -25,6 +36,8 @@
         text-transform: capitalize;
     }
     li{
+        padding-top: 30px;
+        padding-right: 10px;
         list-style-type: none;
     }
     a{
@@ -32,21 +45,17 @@
         margin-left: 25px;
         color: rgb(58, 58, 58);
     }
-    nav{
-        display:grid;
-        
-    }
     .selections{
         display: flex;
         justify-content: space-between;
         margin-right: 20px;
     }
-    img{
-        height: 80px;
-        width: 80px;
+    img.KL{
+        height: 100px;
+        width: 100px;
         cursor: pointer;
     }
-    .second{
+    .first{
         color: var(--ff-blue);
         
     }
@@ -59,18 +68,45 @@
         font-weight: 800;
         color: var(--ff-blue);
     }
-    
-    .Title{
-        margin-top: 100px;
+    .computerpic{
+        height: 250px;
+        width: 250px;
+    }
+    .text{
+        font-family: "Poppins",sans-serif;
+    }
+    .textbottom{
+        font-size: 1.3rem;
+        font-weight: 700;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
-    .computerpic{
-        height: 300px;
-        width: 300px;
+    mark{
+        padding: 5px;
+        background-color: var(--ff-light-blue);
+        color: var(--white);
     }
-    
+    p{
+        padding: 35px;
+        padding-left: 0;
+        margin: 0;
+    }
+    .btn{
+        font-size: 0.75rem;
+        font-family: "Poppins",sans-serif;
+        text-transform: uppercase;
+        border: 2px solid black ;
+        background: transparent;
+        transition: 0.5s;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+    }
+    .btn:hover{
+        color: var(--white);
+        background-color: var(--black);
+    }
 </style>
 <html lang="en">
 <head>
@@ -82,7 +118,7 @@
 <body>
     <nav>
         <div class="selections">
-            <img src="https://img01.jituwang.com/190611/256556-1Z61109362941.jpg">
+            <img src="https://zen-bell-0886a8.netlify.app/VScode/homework2.8/k.jpg" class="KL">
             <ul class="links">
                 <li><a class="first" href="home.html">home</a></li>
                 <li><a class="second" href="work.html">work</a></li>
@@ -98,13 +134,18 @@
                 <h1>
                     i'm kevin lai
                 </h1>
-            <p>A</p>
-            <mark>University student</mark>
-        </div>
+                <div class="textbottom">
+                    <p>A
+                    <mark>University student</mark>
+                    based in Tanan, Taiwan
+                    </p>
+                </div>
+                <a class="btn" href="">view my work</a>
+               
+            </div>
         </div>
     </main>
     <script>
-       
     </script>
 </body>
 </html>
